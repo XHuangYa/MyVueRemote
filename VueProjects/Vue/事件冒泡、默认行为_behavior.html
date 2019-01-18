@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>事件冒泡，默认行为</title>
+	</head>
+	<body>
+		<div id="vue_app">
+			<span>My age {{age}}</span>
+			<!--once 点击事件将只会触发一次-->
+			<button v-on:click.once="add">只允许点击一次</button>
+			<div id="mousemove" v-on:mousemove="updateLocation">
+				<span>X:{{x}}  Y:{{y}}</span>
+				<!--阻止事件冒泡-->
+				<p v-on:mousemove.stop="">stopMoving</p>
+			</div>
+			<!--阻止默认行为,弹出alert，将不再跳转-->
+			<a @click.prevent="alert()" href="https://www.baidu.com">百度</a>
+		</div>
+		<script type="text/javascript" src="js/behavior.js" ></script>
+	</body>
+</html>

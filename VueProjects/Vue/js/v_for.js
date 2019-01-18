@@ -1,0 +1,26 @@
+new Vue({
+	el:"#vue_app",
+	data:{
+		characters:["Herry","Jams","KeBi"],
+		users:[{
+			name:"Peter",
+			age:30,
+		},{
+			name:"Lucy",
+			age:20,
+		}],
+		books:{
+			name:"java",
+			page:400
+		},
+		tools:[{
+			complete:false,
+			id:1,
+			tppe:"A"
+		},{
+			complete:true,
+			id:2,
+			tppe:"B"
+		},]
+	}
+});

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<title></title>
+	</head>
+	<body>
+		<div id="vue_app">
+				<show></show>
+				<!--通过 Prop 向子组件传递数据-->
+				<blog-post title="JavaScript"></blog-post>
+				<blog-post title="Java"></blog-post>
+				<blog-post
+						  v-for="post in posts"
+						  v-bind:id="post.id"
+						  v-bind:title="post.title"
+						  v-bind:age="post.age"
+				></blog-post>
+				<!--单个根元素  推荐使用-->
+				<blog-info  v-for="text in infos" v-bind:info="text">
+				</blog-info>
+		</div>
+		<script type="text/javascript" src="js/component.js" ></script>
+	</body>
+</html>

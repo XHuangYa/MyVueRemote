@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<title></title>
+	</head>
+	<body>
+		<div id="vue_app">
+				<button v-on:click="error=!error">errorToggle</button>
+				<button v-on:click="success=!success">successToggle</button>
+				<button v-on:click="ok=!ok">okToggle</button>
+				<div  v-if="error">
+					<p>跳转失败：404</p>
+				</div>	
+				<div  v-else-if="success">
+					<p>跳转成功：200</p>
+				</div>	
+				<div  v-else="">
+					<p>other</p>
+				</div>		
+				<!--template start-->
+				<!--template当做不可见的包裹元素，不会显示在dom结构中-->
+					<template v-if="ok">
+						  <h1>Title</h1>
+						  <p>Paragraph 1</p>
+						  <p>Paragraph 2</p>
+					</template>
+				<!--template end-->
+				<!--用key管理可复用的元素 start-->
+				   <button v-on:click="loginType=!loginType">Toggle login type</button>
+					<template v-if="loginType">
+						<lable>userName</lable>
+						<input type="text" placeholder="enter your name" key="username-input"/>
+						</template>
+					<template v-else="">
+						<label>Email</label>
+							<input type="text" placeholder="enter your email" key="email-input" />
+					</template>
+				<!--用key管理可复用的元素 end-->
+		</div>
+		<script type="text/javascript" src="js/v_if.js" ></script>
+	</body>
+</html>

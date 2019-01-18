@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<title></title>
+	</head>
+	<body>
+		<div id="vue_app">
+			<button v-on:click="a++">A</button>
+			<button v-on:click="b++">B</button>
+			<br>
+			<span>A: {{a}}-B:{{b}}</span>
+			<!--常规调用methods进行计算-->
+			<p>Age+A:{{addToA()}}</p>
+			<p>Age+B:{{addToB()}}</p>
+			<!--computed 计算属性进行计算，因为conputed是属性，所以调用的时候不加（）-->
+			<p>Age+A:{{addToa}}</p>
+			<p>Age+B:{{addTob}}</p>
+		</div>
+		<script type="text/javascript" src="js/computed.js" ></script>
+	</body>
+</html>

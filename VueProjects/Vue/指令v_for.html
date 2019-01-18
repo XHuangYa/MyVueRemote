@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<title></title>
+	</head>
+	<body>
+			<div id="vue_app">
+				<!--遍历普通数组 -->
+					<ul>
+						<li v-for="character in characters">
+							{{character}}
+						</li>
+					</ul>
+					<!--遍历对象数组
+						   第一个参数代表：对象
+						   第二个参 数代表：索引，下标
+					-->
+					<div>
+						<p v-for="(user,index) in users">
+							{{index}}-{{user.name}}-{{user.age}}
+						</p>
+					</div>
+					<!--	不会出现在dom结构中的元素 tempplate
+							第一个参数代表：对象
+						   	第二个参 数代表：索引，下标
+					-->
+					<template v-for="(user,index) in users ">
+						<!--
+							第一个参数是对象：value
+							第二个参数是对象：key
+						-->
+							<template v-for="(value,key) in user">
+								<p>{{index}}.{{key}}:{{value}}</p>
+							</template>
+					</template>
+					<!--遍历对象 
+						    第一个参数对象：value
+						    第二个参数对象:key
+						    第三个参数对象：索引下标
+					-->
+					<div v-for="(value,key,index) in books">
+						{{index+1}}.{{key}}:{{value}}
+					</div>
+					<!--v-if 和 v-for结合使用:仅有的一些项渲染节点-->
+					<template v-for="tool in tools" v-if="tool.complete">
+						<p v-for="(value,key) in tool">
+							{{key}}:{{value}}
+						</p>
+					</template>
+					<!--v-if 和 v-for结合使用:有条件地跳过循环的执行-->
+					<ul v-if="tools.length">
+						<li v-for="tool in tools">
+							<span  v-for="(value,key) in tool">
+								{{key}}:{{value}}
+							</span>
+						</li>
+					</ul>
+			</div>
+			<script type="text/javascript" src="js/v_for.js" ></script>			
+	</body>
+</html>

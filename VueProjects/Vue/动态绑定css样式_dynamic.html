@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<title></title>
+		<title></title>
+	</head>
+	<body>
+		<div id="vue_app">
+			<div>
+				<h2>动态绑定CSS</h2>
+				<h2>实例一</h2>
+				<div style="width: 40px; height: 40px; " v-bind:class="{changeColor:false}">
+					<span>hellllo</span>
+				</div>
+				<!--click 绑定的changeColor 指的是data中的属性；
+					  class 绑定的changeColor 指的是css样式中的class类 ==》changeColor：true/false
+				-->
+				<div v-on:click="changeColor= !changeColor"  v-bind:class="{changeColor:changeColor}" id="color">
+					<span >Hello</span>
+				</div>
+				<h2>实例二</h2>
+				<button v-on:click="changeColor= !changeColor">changeColor</button>
+				<button v-on:click="changeLength= !changeLength">changeLength</button>
+					<div   v-bind:class="comClasss" id="color">
+					<span >Hello</span>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/dynamic.js" ></script>
+	</body>
+</html>

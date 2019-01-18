@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<title></title>
+	</head>
+	<body>
+		<div id="vue_app">
+		<label>Name:</label>
+			<!--v-model="" 同步js中数据，可以将js中属性值显示到input标签中-->
+			<input v-model="name"  type="text"/>
+			<!--<input  type="text" ref="name" v-on:keyup="printName()"/>-->
+			<span id="name">
+				{{name}}
+			</span><br>
+			<label>Age:</label>
+			<!--<input v-model="age" type="text" ref="age" />-->
+			<input type="text" ref="age" v-on:keyup="printAge()"/>
+			<span >
+				{{age}}
+			</span>
+		</div>
+		<script type="text/javascript" src="js/model.js" ></script>
+	</body>
+</html>

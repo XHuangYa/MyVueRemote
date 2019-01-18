@@ -1,0 +1,38 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+#mousemove{
+	width: 400px;
+	height: 200px;
+	margin: 100px 100px;
+	background-color: gainsboro;
+	border: 1px solid;
+	position: relative;
+}
+#mousemove>span{
+	position: absolute;
+	left: 150px;
+	top: 100px;
+}
+#color{
+	width:200px;
+	height: 200px;
+	background: gray;
+	margin: 100px 100px;
+}
+span{
+	display: inline-block;
+	margin: 60px 60px;
+	background-color: red;
+	text-align: center;
+	font-size: 30px;
+}
+.changeColor span{
+	background-color: greenyellow;
+}
+.changeLength span:after{
+	content:"length";
+	background-color: red;
+	margin-left: 10px;
+}

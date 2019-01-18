@@ -1,0 +1,23 @@
+new Vue({
+	//获取数据的元素，容器的根元素
+	el:"#vue_app",
+	//用来存储数据
+	data:{
+		age:30,
+		x:0,
+		y:0
+	},
+	//用来存储方法
+	methods:{
+		add:function(){
+			this.age++;
+		},
+		updateLocation:function(event){
+			this.x=event.offsetX;
+			this.y=event.offsetY;
+		},
+		alert:function(){
+			alert("HelloWord!");
+		}
+	}
+});

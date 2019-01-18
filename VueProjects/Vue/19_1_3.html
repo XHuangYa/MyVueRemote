@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<link rel="stylesheet" href="css/style.css" />
+		
+	</head>
+	<body>
+		<!--根容器-->
+		<div id="vue_app">
+			<!--调用data属性-->
+			<p>{{name}}</p>
+			<p>{{job}}</p>
+			<!--调用methods方法-->
+			<h2>{{greet("morning")}}</h2>
+			<!--绑定属性 v-bind-->
+			<input type="text" v-bind:value="name" />
+			<input type="text" v-bind:value="job" /><br>
+			<!--a标签绑定属性-->
+			<a v-bind:href="website">website</a>
+			<!--绑定标签-->
+			<span v-html="websiteTag"></span>
+		</div>
+		<script type="text/javascript" src="js/app.js" ></script>
+	</body>
+</html>

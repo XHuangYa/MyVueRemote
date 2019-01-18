@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<title></title>
+	</head>
+	<body>
+		<div id="vue_app">
+			<label>Name:</label>
+			<input   @keydown="printName()"  type="text" placeholder="name"/>
+			<br><span id="name"></span><br>
+			<label>Age:</label>
+			<input @keyup="printAge()" type="text" placeholder="AGE"/>
+			<br><span id="age"></span>
+		</div>
+		<script type="text/javascript" src="js/keyup.js" ></script>
+	</body>
+</html>
